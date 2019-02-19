@@ -167,7 +167,7 @@ if __name__ == "__main__":
                 # ------------ If clean then save to database, else show error in terminal ------------
                 if result:
                     clean_count += 1
-                    # cursor.execute('INSERT INTO logs (count_id,sha, dp) VALUES (?,?, ?)',(clean_count, log['sha'], log['dp']))
+                    cursor.execute('INSERT INTO logs (count_id,sha, dp) VALUES (?,?, ?)',(clean_count, log['sha'], log['dp']))
                     conn.commit()
                 else:
                     dirty_count += 1
