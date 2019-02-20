@@ -43,11 +43,11 @@ class UnitTest(unittest.TestCase):
 
 
         #   --------- Generating invalid logs ----------
-        in_ts = random.randint(19, 199)                                                                             # generate value of ts
+        in_ts = random.randint(19, 199)                                                                             # generate value of in_ts
 
-        in_sha = ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(62))                     # generate value of sha
+        in_sha = ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(62))                     # generate value of in_sha
 
-        in_pt = random.randint(100, 200)                                                                            # generate value of pt
+        in_pt = random.randint(100, 200)                                                                            # generate value of in_pt
 
         in_si_uu_bg = ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(8)) + '-' \
                         + ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(4)) + '-' \
@@ -55,15 +55,15 @@ class UnitTest(unittest.TestCase):
                         ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(31)) + '-' \
                         + ''.join(random.choice('qwertyuiopasddg') for i in range(17)) +\
                         ''.join(random.choice(string.ascii_lowercase + string.digits) for i in range(3)) + '-' \
-                        + ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(12))            # generate value of si, uu and bg
+                        + ''.join(random.choice(('qwertyuiopasddg') + string.digits) for i in range(12))            # generate value of in_si_uu_bg
 
         in_nm = ''.join(random.choice(string.ascii_letters) for i in range(140)) + '- ' + '.' + \
-                ''.join(random.choice(('qwertyuiopasddg') + string.ascii_lowercase) for i in range(42))             # generate value of nm
+                ''.join(random.choice(('qwertyuiopasddg') + string.ascii_lowercase) for i in range(42))             # generate value of in_nm
 
         in_ph = ''.join(random.choice(string.ascii_letters) for i in range(50)) + '- /' + '.' + \
-                ''.join(random.choice(('qwertyuiopasddg') + string.ascii_lowercase) for i in range(46))             # generate value of ph
+                ''.join(random.choice(('qwertyuiopasddg') + string.ascii_lowercase) for i in range(21))             # generate value of in_ph
 
-        in_dp = random.randint(1, 3)                                                                                # generate value of dp
+        in_dp = random.randint(4, 100)                                                                               # generate value of in)dp
 
         invalid_log_entry = {'ts': in_ts, 'pt': in_pt, 'si': in_si_uu_bg, 'uu': in_si_uu_bg, 'bg': in_si_uu_bg, 'sha': in_sha, 'nm': in_nm,'ph': in_ph, 'dp': in_dp}
 

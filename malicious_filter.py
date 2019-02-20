@@ -1,4 +1,5 @@
 import datetime,sqlite3,json,re
+import unittest
 
 """
 __author__ = "Amarjit Singh Dhillon"
@@ -182,3 +183,5 @@ if __name__ == "__main__":
     finally:
         conn.close()
         print("DB connection closed successfully")
+
+    unittest.main()                                                                                 # run the unit test case
